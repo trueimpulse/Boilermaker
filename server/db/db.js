@@ -5,6 +5,13 @@ const db = new Sequelize(
   {
     logging: false, // unless you like the logs
     // ...and there are many other options you may want to play with
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   }
 );
 
