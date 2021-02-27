@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "start": "node server",
     "start-dev": "webpack -w & NODE_ENV='development' nodemon server",
-    "deploy": "script/deploy"
-
+    "deploy": "script/deploy",
+    "heroku-token": "script/encrypt-heroku-auth-token.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,10 +25,12 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.17",
     "axios": "^0.21.1",
+    "child_process": "^1.0.2",
     "connect-session-sequelize": "^7.1.1",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "git-url-parse": "^11.4.4",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
@@ -42,6 +44,8 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^6.5.0"
+    "sequelize": "^6.5.0",
+    "simple-git": "^2.35.2",
+    "yaml": "^1.10.0"
   }
 }
